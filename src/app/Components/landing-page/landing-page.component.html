@@ -91,7 +91,7 @@
       }
       .grid {
         display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 columns */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
         justify-content: center;
       }
@@ -135,30 +135,6 @@
       .teal {
         background-color: #afeeee;
       }
-      .green {
-        background-color: #d1ffd1;
-      }
-      .orange {
-        background-color: #ffcc99;
-      }
-      .blue {
-        background-color: #99ccff;
-      }
-      .purple {
-        background-color: #d1ccff;
-      }
-      .red {
-        background-color: #ff9999;
-      }
-      .brown {
-        background-color: #d2b48c;
-      }
-      .grey {
-        background-color: #dcdcdc;
-      }
-      .lightblue {
-        background-color: #add8e6;
-      }
     </style>
   </head>
   <body>
@@ -171,7 +147,7 @@
     </header>
     <div class="container content">
       <div class="hero">
-        <h1>Angular Cheat Sheet for React Developers</h1>
+        <h1>Angular cheet sheet For React Developers</h1>
         <p>Bring the best experiences across the internet to one place</p>
         <div class="search-container">
           <input
@@ -184,7 +160,6 @@
 
         <div class="cards-container">
           <div class="grid">
-            <!-- Existing Cards -->
             <div class="card pink">
               <div class="card-header">
                 <span class="card-title">⭐ 5.0</span>
@@ -235,112 +210,6 @@
                 <div>
                   <div class="card-title">Video Editing</div>
                   <div class="card-apps">03 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-
-            <!-- New Cards -->
-            <div class="card green">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.9</span>
-                <span class="card-downloads">1.5M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">SEO Tools</div>
-                  <div class="card-apps">12 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card orange">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.8</span>
-                <span class="card-downloads">900K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Project Management</div>
-                  <div class="card-apps">15 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card blue">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.7</span>
-                <span class="card-downloads">850K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Social Media Analytics</div>
-                  <div class="card-apps">19 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card purple">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.6</span>
-                <span class="card-downloads">600K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Marketing Automation</div>
-                  <div class="card-apps">10 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card red">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.9</span>
-                <span class="card-downloads">1.7M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Customer Support</div>
-                  <div class="card-apps">25 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card brown">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.8</span>
-                <span class="card-downloads">1.2M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Data Analysis</div>
-                  <div class="card-apps">14 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card grey">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.7</span>
-                <span class="card-downloads">750K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Cloud Storage</div>
-                  <div class="card-apps">20 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card lightblue">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.6</span>
-                <span class="card-downloads">900K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Collaboration Tools</div>
-                  <div class="card-apps">22 Apps</div>
                 </div>
                 <div class="card-arrow">→</div>
               </div>
