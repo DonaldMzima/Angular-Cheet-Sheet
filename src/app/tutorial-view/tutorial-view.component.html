@@ -1,0 +1,17 @@
+<div class="grid">
+  <div
+    *ngFor="let card of cards"
+    class="card {{ card }}"
+    (click)="openDialog(card)"
+  >
+    <div class="card-header">
+      <span class="card-title">⭐ {{ card.rating }}</span>
+    </div>
+    <div class="card-content">
+      <div>
+        <div class="card-title">{{ card.title }}</div>
+      </div>
+      <div class="card-arrow">→</div>
+    </div>
+  </div>
+</div>
