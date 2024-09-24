@@ -1,353 +1,105 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>App Whale - Connect the Best Tools</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-      }
-      body {
-        background-color: #ffffff;
-      }
-      header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 20px 0;
-        border-bottom: 1px solid #ccc;
-        background-color: #fff;
-        position: fixed;
-        width: 100%;
-        top: 0;
-        z-index: 1000;
-      }
-      .logo {
-        font-size: 24px;
-        font-weight: bold;
-      }
-      .nav-buttons {
-        display: flex;
-        gap: 10px;
-      }
-      .btn {
-        padding: 10px 20px;
-        border-radius: 20px;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .btn-light {
-        background-color: #f0f0f0;
-        color: #000;
-      }
-      .btn-dark {
-        background-color: #000;
-        color: #fff;
-      }
-      .content {
-        padding-top: 80px; /* Adjust based on the header height */
-        text-align: center;
-      }
-      .hero {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-      h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
-      }
-      p {
-        font-size: 18px;
-        margin-bottom: 30px;
-      }
-      .search-container {
-        display: flex;
-        justify-content: center;
-        margin-bottom: 30px;
-      }
-      .search-input {
-        width: 400px;
-        padding: 10px 20px;
-        border: 1px solid #ccc;
-        border-radius: 20px 0 0 20px;
-        font-size: 16px;
-      }
-      .search-btn {
-        padding: 10px 20px;
-        background-color: #000;
-        color: #fff;
-        border: none;
-        border-radius: 0 20px 20px 0;
-        font-size: 16px;
-        cursor: pointer;
-      }
-      .cards-container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 4 columns */
-        gap: 20px;
-        justify-content: center;
-      }
-      .card {
-        padding: 20px;
-        border-radius: 10px;
-        color: #000;
-      }
-      .card-header {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 10px;
-      }
-      .card-title {
-        font-weight: bold;
-      }
-      .card-downloads {
-        font-size: 14px;
-      }
-      .card-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .card-apps {
-        font-size: 14px;
-      }
-      .card-arrow {
-        font-size: 20px;
-      }
-      .pink {
-        background-color: #ffd1dc;
-      }
-      .black {
-        background-color: #000;
-        color: #fff;
-      }
-      .yellow {
-        background-color: #fffacd;
-      }
-      .teal {
-        background-color: #afeeee;
-      }
-      .green {
-        background-color: #d1ffd1;
-      }
-      .orange {
-        background-color: #ffcc99;
-      }
-      .blue {
-        background-color: #99ccff;
-      }
-      .purple {
-        background-color: #d1ccff;
-      }
-      .red {
-        background-color: #ff9999;
-      }
-      .brown {
-        background-color: #d2b48c;
-      }
-      .grey {
-        background-color: #dcdcdc;
-      }
-      .lightblue {
-        background-color: #add8e6;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="logo">🐳 App Whale</div>
-      <div class="nav-buttons">
-        <a href="#" class="btn btn-light">Log In</a>
-        <a href="#" class="btn btn-dark">Get Started</a>
-      </div>
-    </header>
-    <div class="container content">
-      <div class="hero">
-        <h1>Angular Cheat Sheet for React Developers</h1>
-        <p>Bring the best experiences across the internet to one place</p>
-        <div class="search-container">
-          <input
-            type="text"
-            class="search-input"
-            placeholder="Search For Tools"
-          />
-          <button class="search-btn">Search</button>
-        </div>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
 
-        <div class="cards-container">
-          <div class="grid">
-            <!-- Existing Cards -->
-            <div class="card pink">
-              <div class="card-header">
-                <span class="card-title">⭐ 5.0</span>
-                <span class="card-downloads">1.8M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Share Your Content</div>
-                  <div class="card-apps">28 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card black">
-              <div class="card-header">
-                <span class="card-title">⭐ 5.0</span>
-                <span class="card-downloads">1.8M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">
-                    Integrate Payment and Collect Your Money
-                  </div>
-                  <div class="card-apps">16 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card yellow">
-              <div class="card-header">
-                <span class="card-title">⭐ 5.0</span>
-                <span class="card-downloads">1.8M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">App Integration</div>
-                  <div class="card-apps">34 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card teal">
-              <div class="card-header">
-                <span class="card-title">⭐ 5.0</span>
-                <span class="card-downloads">2M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Video Editing</div>
-                  <div class="card-apps">03 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .nav-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  .btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .btn-light {
+    background-color: #f0f0f0;
+    color: #000;
+  }
+  .btn-dark {
+    background-color: #000;
+    color: #fff;
+  }
+  .content {
+    padding-top: 80px; /* Adjust based on the header height */
+    text-align: center;
+  }
+  .hero {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  .search-input {
+    width: 400px;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px 0 0 20px;
+    font-size: 16px;
+  }
+  .search-btn {
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
 
-            <!-- New Cards -->
-            <div class="card green">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.9</span>
-                <span class="card-downloads">1.5M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">SEO Tools</div>
-                  <div class="card-apps">12 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card orange">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.8</span>
-                <span class="card-downloads">900K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Project Management</div>
-                  <div class="card-apps">15 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card blue">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.7</span>
-                <span class="card-downloads">850K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Social Media Analytics</div>
-                  <div class="card-apps">19 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card purple">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.6</span>
-                <span class="card-downloads">600K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Marketing Automation</div>
-                  <div class="card-apps">10 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card red">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.9</span>
-                <span class="card-downloads">1.7M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Customer Support</div>
-                  <div class="card-apps">25 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card brown">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.8</span>
-                <span class="card-downloads">1.2M Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Data Analysis</div>
-                  <div class="card-apps">14 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card grey">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.7</span>
-                <span class="card-downloads">750K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Cloud Storage</div>
-                  <div class="card-apps">20 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-            <div class="card lightblue">
-              <div class="card-header">
-                <span class="card-title">⭐ 4.6</span>
-                <span class="card-downloads">900K Downloads</span>
-              </div>
-              <div class="card-content">
-                <div>
-                  <div class="card-title">Collaboration Tools</div>
-                  <div class="card-apps">22 Apps</div>
-                </div>
-                <div class="card-arrow">→</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<header>
+  <div class="logo">🐳 Angular Cheat Sheet</div>
+  <div class="nav-buttons">
+    <a href="#" class="btn btn-light">Log In</a>
+    <a href="#" class="btn btn-dark">Get Started</a>
+  </div>
+</header>
+<div class="container content">
+  <div class="hero">
+    <h1>Angular Cheat Sheet for React Developers</h1>
+    <p>Bring the best experiences across the internet to one place</p>
+    <div class="search-container">
+      <input
+        type="te  xt"
+        class="search-input"
+        placeholder="Search For Tools"
+      />
+      <button class="search-btn">Search</button>
     </div>
-  </body>
-</html>
+
+    <app-modal></app-modal>
+    <app-tutorial-view></app-tutorial-view>
+  </div>
+</div>

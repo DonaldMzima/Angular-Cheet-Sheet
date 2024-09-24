@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ccc;
+  background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-light {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+.btn-dark {
+  background-color: #000;
+  color: #fff;
+}
+
+.content {
+  padding-top: 80px; /* Adjust based on the header height */
+  text-align: center;
+}
+
+.hero {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 400px;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  font-size: 16px;
+}
+
+.search-btn {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cards-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns */
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 10px;
+  color: #000;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.card-downloads {
+  font-size: 14px;
+}
+
+.card-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-apps {
+  font-size: 14px;
+}
+
+.card-arrow {
+  font-size: 20px;
+}
+
+.pink {
+  background-color: #ffd1dc;
+}
+
+.black {
+  background-color: #000;
+  color: #fff;
+}
+
+.yellow {
+  background-color: #fffacd;
+}
+
+.teal {
+  background-color: #afeeee;
+}
+
+.green {
+  background-color: #d1ffd1;
+}
+
+.orange {
+  background-color: #ffcc99;
+}
+
+.blue {
+  background-color: #99ccff;
+}
+
+.purple {
+  background-color: #d1ccff;
+}
+
+.red {
+  background-color: #ff9999;
+}
+
+.brown {
+  background-color: #d2b48c;
+}
+
+.grey {
+  background-color: #dcdcdc;
+}
+
+.lightblue {
+  background-color: #add8e6;
+}
