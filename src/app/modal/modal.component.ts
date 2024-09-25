@@ -9,7 +9,7 @@ import {
   MatDialogRef,
 } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { CommonModule } from '@angular/common'; // Import CommonModule
+import { CommonModule, NgOptimizedImage } from '@angular/common'; // Import CommonModule
 
 export interface DialogData {
   codeExample:
@@ -29,7 +29,7 @@ export interface DialogData {
   standalone: true,
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
-  imports: [MatButtonModule, CommonModule], // Add CommonModule here
+  imports: [MatButtonModule, CommonModule, NgOptimizedImage], // Add CommonModule here
 })
 export class ModalView {
   dialog = inject(MatDialog);
