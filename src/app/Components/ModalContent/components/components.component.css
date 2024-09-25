@@ -1,0 +1,44 @@
+.grid-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0; /* Light gray background for visibility */
+  padding: 20px;
+  margin: 10px 0; /* Visible margin between rows */
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+ul li {
+  font-size: 1.2rem;
+  padding: 10px 0;
+}
+
+span {
+  color: green; /* Green color for checkmark */
+}
+
+.grid-row {
+  display: flex;
+  justify-content: space-between; /* Adjusts the layout for columns */
+  align-items: flex-start; /* Aligns items at the start */
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+}
+
+.column {
+  flex: 1; /* Each column takes equal space */
+  padding: 10px; /* Padding inside each column */
+
+  height: 100vh; /* Responsive modal height */
+}
+
+.modal-image {
+  max-width: 100%; /* Ensures the image is responsive */
+  height: auto; /* Keeps the aspect ratio */
+}

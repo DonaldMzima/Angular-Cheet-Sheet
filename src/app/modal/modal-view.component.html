@@ -2,130 +2,16 @@
   <div>
     <ul>
       <li *ngIf="data.codeExample === 'FormView'">
-        <div class="grid-row">
-          <div class="column">
-            <a href="https://example.com/formview" target="_blank">
-              <!-- <img
-                src="/src/assets/Setting_Up.webp"
-                alt="Description of image"
-                class="modal-image"
-              /> -->
-              <img
-                alt="Description of image"
-                class="modal-image"
-                src="https://angular.io/assets/images/logos/angular/angular.png"
-                width="400"
-                height="200"
-                priority
-              />
-            </a>
-          </div>
-          <div class="column">
-            <h3>Angular</h3>
-            <code>
-              npm install -g
-              <!-- @angular/cli  -->
-              ng new angular-app cd angular-app ng serve
-            </code>
-          </div>
-          <div class="column">
-            <h3>React</h3>
-            <code> You use create-react-app or Next.js </code>
-          </div>
-        </div>
+        <app-projectSetUp></app-projectSetUp>
       </li>
       <li *ngIf="data.codeExample === 'Props'">
-        <div class="grid-row">
-          <div class="column">
-            <a href="https://example.com/props" target="_blank">
-              <img
-                alt="Description of image"
-                class="modal-image"
-                src="https://angular.io/assets/images/logos/angular/angular.png"
-                width="400"
-                height="200"
-                priority
-              />
-            </a>
-          </div>
-          <div class="column">
-            <h3>Angular</h3>
-            <code>
-              Angular is a platform for building mobile and desktop web
-              applications. It is a full-fledged framework with powerful tools.
-            </code>
-          </div>
-          <div class="column">
-            <h3>React</h3>
-            <code>
-              React is a JavaScript library for building user interfaces. It
-              focuses on building UI components and is more flexible in its
-              approach.
-            </code>
-          </div>
-        </div>
+        <app-components></app-components>
       </li>
       <li *ngIf="data.codeExample === 'API'">
-        <div class="grid-row">
-          <div class="column">
-            <a href="https://example.com/api" target="_blank">
-              <img
-                alt="Description of image"
-                class="modal-image"
-                src="https://angular.io/assets/images/logos/angular/angular.png"
-                width="400"
-                height="200"
-                priority
-              />
-            </a>
-          </div>
-          <div class="column">
-            <h3>Angular</h3>
-            <code>
-              Angular is a platform for building mobile and desktop web
-              applications. It is a full-fledged framework with powerful tools.
-            </code>
-          </div>
-          <div class="column">
-            <h3>React</h3>
-            <code>
-              React is a JavaScript library for building user interfaces. It
-              focuses on building UI components and is more flexible in its
-              approach.
-            </code>
-          </div>
-        </div>
+        <app-templateSyntex></app-templateSyntex>
       </li>
       <li *ngIf="data.codeExample === 'Lifecycle_Methods'">
-        <div class="grid-row">
-          <div class="column">
-            <a href="https://example.com/lifecycle-methods" target="_blank">
-              <img
-                alt="Description of image"
-                class="modal-image"
-                src="https://angular.io/assets/images/logos/angular/angular.png"
-                width="400"
-                height="200"
-                priority
-              />
-            </a>
-          </div>
-          <div class="column">
-            <h3>Angular</h3>
-            <code>
-              Angular is a platform for building mobile and desktop web
-              applications. It is a full-fledged framework with powerful tools.
-            </code>
-          </div>
-          <div class="column">
-            <h3>React</h3>
-            <code>
-              React is a JavaScript library for building user interfaces. It
-              focuses on building UI components and is more flexible in its
-              approach.
-            </code>
-          </div>
-        </div>
+        <app-lifeCircleMethods></app-lifeCircleMethods>
       </li>
       <li *ngIf="data.codeExample === 'State_Management'">
         <div class="grid-row">
