@@ -9,7 +9,11 @@ import {
   MatDialogRef,
 } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
-import { CommonModule, NgOptimizedImage } from '@angular/common'; // Import CommonModule
+import { CommonModule, NgOptimizedImage } from '@angular/common';
+import { ProjectSetUpComponent } from '../Components/ModalContent/projectSetUp/projectSetUp.component';
+import { ComponentsComponent } from '../Components/ModalContent/components/components.component';
+import { TemplateSyntexComponent } from '../Components/ModalContent/templateSyntex/templateSyntex.component';
+import { LifeCircleMethodsComponent } from '../Components/ModalContent/lifeCircleMethods/lifeCircleMethods.component';
 
 export interface DialogData {
   codeExample:
@@ -29,7 +33,15 @@ export interface DialogData {
   standalone: true,
   templateUrl: './modal.component.html',
   styleUrls: ['./modal.component.css'],
-  imports: [MatButtonModule, CommonModule, NgOptimizedImage], // Add CommonModule here
+  imports: [
+    MatButtonModule,
+    CommonModule,
+    NgOptimizedImage,
+    ProjectSetUpComponent,
+    ComponentsComponent,
+    TemplateSyntexComponent,
+    LifeCircleMethodsComponent,
+  ],
 })
 export class ModalView {
   dialog = inject(MatDialog);
@@ -53,7 +65,11 @@ export class ModalView {
     MatDialogActions,
     MatDialogClose,
     MatButtonModule,
-    CommonModule, // Add CommonModule here
+    CommonModule,
+    ProjectSetUpComponent,
+    ComponentsComponent,
+    TemplateSyntexComponent,
+    LifeCircleMethodsComponent,
   ],
 })
 export class ModalViewDialog {

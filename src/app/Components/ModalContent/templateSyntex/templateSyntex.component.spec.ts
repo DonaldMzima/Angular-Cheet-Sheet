@@ -1,5 +1,5 @@
 /* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
@@ -9,12 +9,11 @@ describe('TemplateSyntexComponent', () => {
   let component: TemplateSyntexComponent;
   let fixture: ComponentFixture<TemplateSyntexComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ TemplateSyntexComponent ]
-    })
-    .compileComponents();
-  }));
+      declarations: [TemplateSyntexComponent],
+    }).compileComponents();
+  });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TemplateSyntexComponent);
