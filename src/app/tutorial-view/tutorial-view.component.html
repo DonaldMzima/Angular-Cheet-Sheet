@@ -1,7 +1,7 @@
 <div class="grid">
   <div
     *ngFor="let card of cards"
-    class="card {{ card }}"
+    class="card {{ card.color }}"
     (click)="openDialog(card)"
   >
     <div class="card-header">

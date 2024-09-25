@@ -35,37 +35,37 @@ export class TutorialViewComponent {
     {
       title: 'Lifecycle Methods',
       rating: 5.0,
-      color: 'elephant',
+      color: 'teal',
       codeExample: 'Lifecycle_Methods',
     },
     {
       title: 'State Management',
       rating: 5.0,
-      color: 'giraffe',
+      color: 'green',
       codeExample: 'State_Management',
     },
     {
       title: 'Routing',
       rating: 5.0,
-      color: 'tiger',
+      color: 'orange',
       codeExample: 'Routing',
     },
     {
       title: 'Services',
       rating: 5.0,
-      color: 'zebra',
+      color: 'blue',
       codeExample: 'Services',
     },
     {
       title: 'Directives',
       rating: 5.0,
-      color: 'bear',
+      color: 'purple',
       codeExample: 'bear',
     },
     {
       title: 'Custom Hooks',
       rating: 5.0,
-      color: 'wolf',
+      color: 'red',
       codeExample: 'FormView',
     },
   ];

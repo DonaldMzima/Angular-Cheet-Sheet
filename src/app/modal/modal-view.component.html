@@ -1,130 +1,152 @@
 <mat-dialog-content class="modal-grid-container">
-  <!-- <div class="grid-row">
-    <p>React To Angular Cheat Sheet Overview:</p>
-  </div> -->
-
-  <!-- Second row of the grid with the list -->
   <div>
     <ul>
       <li *ngIf="data.codeExample === 'FormView'">
         <div class="grid-row">
           <div class="column">
-            <img
-              src="path/to/your/image.jpg"
-              alt="Description of image"
-              class="modal-image"
-            />
+            <a href="https://example.com/formview" target="_blank">
+              <!-- <img
+                src="/src/assets/Setting_Up.webp"
+                alt="Description of image"
+                class="modal-image"
+              /> -->
+              <img
+                alt="Description of image"
+                class="modal-image"
+                src="https://angular.io/assets/images/logos/angular/angular.png"
+                width="400"
+                height="200"
+                priority
+              />
+            </a>
           </div>
           <div class="column">
             <h3>Angular</h3>
-            <p>
-              Angular is a platform for building mobile and desktop web
-              applications. It is a full-fledged framework with powerful tools.
-            </p>
+            <code>
+              npm install -g
+              <!-- @angular/cli  -->
+              ng new angular-app cd angular-app ng serve
+            </code>
           </div>
           <div class="column">
             <h3>React</h3>
-            <p>
-              React is a JavaScript library for building user interfaces. It
-              focuses on building UI components and is more flexible in its
-              approach.
-            </p>
+            <code> You use create-react-app or Next.js </code>
           </div>
         </div>
       </li>
       <li *ngIf="data.codeExample === 'Props'">
         <div class="grid-row">
           <div class="column">
-            <img
-              src="path/to/your/image.jpg"
-              alt="Description of image"
-              class="modal-image"
-            />
+            <a href="https://example.com/props" target="_blank">
+              <img
+                alt="Description of image"
+                class="modal-image"
+                src="https://angular.io/assets/images/logos/angular/angular.png"
+                width="400"
+                height="200"
+                priority
+              />
+            </a>
           </div>
           <div class="column">
             <h3>Angular</h3>
-            <p>
+            <code>
               Angular is a platform for building mobile and desktop web
               applications. It is a full-fledged framework with powerful tools.
-            </p>
+            </code>
           </div>
           <div class="column">
             <h3>React</h3>
-            <p>
+            <code>
               React is a JavaScript library for building user interfaces. It
               focuses on building UI components and is more flexible in its
               approach.
-            </p>
+            </code>
           </div>
         </div>
       </li>
       <li *ngIf="data.codeExample === 'API'">
         <div class="grid-row">
           <div class="column">
-            <img
-              src="path/to/your/image.jpg"
-              alt="Description of image"
-              class="modal-image"
-            />
+            <a href="https://example.com/api" target="_blank">
+              <img
+                alt="Description of image"
+                class="modal-image"
+                src="https://angular.io/assets/images/logos/angular/angular.png"
+                width="400"
+                height="200"
+                priority
+              />
+            </a>
           </div>
           <div class="column">
             <h3>Angular</h3>
-            <p>
+            <code>
               Angular is a platform for building mobile and desktop web
               applications. It is a full-fledged framework with powerful tools.
-            </p>
+            </code>
           </div>
           <div class="column">
             <h3>React</h3>
-            <p>
+            <code>
               React is a JavaScript library for building user interfaces. It
               focuses on building UI components and is more flexible in its
               approach.
-            </p>
+            </code>
           </div>
         </div>
       </li>
       <li *ngIf="data.codeExample === 'Lifecycle_Methods'">
         <div class="grid-row">
           <div class="column">
-            <img
-              src="path/to/your/image.jpg"
-              alt="Description of image"
-              class="modal-image"
-            />
+            <a href="https://example.com/lifecycle-methods" target="_blank">
+              <img
+                alt="Description of image"
+                class="modal-image"
+                src="https://angular.io/assets/images/logos/angular/angular.png"
+                width="400"
+                height="200"
+                priority
+              />
+            </a>
           </div>
           <div class="column">
             <h3>Angular</h3>
-            <p>
+            <code>
               Angular is a platform for building mobile and desktop web
               applications. It is a full-fledged framework with powerful tools.
-            </p>
+            </code>
           </div>
           <div class="column">
             <h3>React</h3>
-            <p>
+            <code>
               React is a JavaScript library for building user interfaces. It
               focuses on building UI components and is more flexible in its
               approach.
-            </p>
+            </code>
           </div>
         </div>
       </li>
       <li *ngIf="data.codeExample === 'State_Management'">
         <div class="grid-row">
           <div class="column">
-            <img
-              src="path/to/your/image.jpg"
-              alt="Description of image"
-              class="modal-image"
-            />
+            <a href="https://example.com/state-management" target="_blank">
+              <img
+                alt="Description of image"
+                class="modal-image"
+                src="https://angular.io/assets/images/logos/angular/angular.png"
+                width="400"
+                height="200"
+                priority
+              />
+            </a>
           </div>
           <div class="column">
             <h3>Angular</h3>
-            <p>
+            <code>
               Angular is a platform for building mobile and desktop web
               applications. It is a full-fledged framework with powerful tools.
-            </p>
+            </code>
           </div>
           <div class="column">
             <h3>React</h3>
@@ -139,109 +161,127 @@
       <li *ngIf="data.codeExample === 'Routing'">
         <div class="grid-row">
           <div class="column">
-            <img
-              src="path/to/your/image.jpg"
-              alt="Description of image"
-              class="modal-image"
-            />
+            <a href="https://example.com/routing" target="_blank">
+              <img
+                alt="Description of image"
+                class="modal-image"
+                src="https://angular.io/assets/images/logos/angular/angular.png"
+                width="400"
+                height="200"
+                priority
+              />
+            </a>
           </div>
           <div class="column">
             <h3>Angular</h3>
-            <p>
+            <code>
               Angular is a platform for building mobile and desktop web
               applications. It is a full-fledged framework with powerful tools.
-            </p>
+            </code>
           </div>
           <div class="column">
             <h3>React</h3>
-            <p>
+            <code>
               React is a JavaScript library for building user interfaces. It
               focuses on building UI components and is more flexible in its
               approach.
-            </p>
+            </code>
           </div>
         </div>
       </li>
       <li *ngIf="data.codeExample === 'Services'">
         <div class="grid-row">
           <div class="column">
-            <img
-              src="path/to/your/image.jpg"
-              alt="Description of image"
-              class="modal-image"
-            />
+            <a href="https://example.com/services" target="_blank">
+              <img
+                alt="Description of image"
+                class="modal-image"
+                src="https://angular.io/assets/images/logos/angular/angular.png"
+                width="400"
+                height="200"
+                priority
+              />
+            </a>
           </div>
           <div class="column">
             <h3>Angular</h3>
-            <p>
+            <code>
               Angular is a platform for building mobile and desktop web
               applications. It is a full-fledged framework with powerful tools.
-            </p>
+            </code>
           </div>
           <div class="column">
             <h3>React</h3>
-            <p>
+            <code>
               React is a JavaScript library for building user interfaces. It
               focuses on building UI components and is more flexible in its
               approach.
-            </p>
+            </code>
           </div>
         </div>
       </li>
       <li *ngIf="data.codeExample === 'bear'">
         <div class="grid-row">
           <div class="column">
-            <img
-              src="path/to/your/image.jpg"
-              alt="Description of image"
-              class="modal-image"
-            />
+            <a href="https://example.com/bear" target="_blank">
+              <img
+                alt="Description of image"
+                class="modal-image"
+                src="https://angular.io/assets/images/logos/angular/angular.png"
+                width="400"
+                height="200"
+                priority
+              />
+            </a>
           </div>
           <div class="column">
             <h3>Angular</h3>
-            <p>
+            <code>
               Angular is a platform for building mobile and desktop web
               applications. It is a full-fledged framework with powerful tools.
-            </p>
+            </code>
           </div>
           <div class="column">
             <h3>React</h3>
-            <p>
+            <code>
               React is a JavaScript library for building user interfaces. It
               focuses on building UI components and is more flexible in its
               approach.
-            </p>
+            </code>
           </div>
         </div>
       </li>
       <li *ngIf="data.codeExample === 'Hooks'">
         <div class="grid-row">
           <div class="column">
-            <img
-              src="path/to/your/image.jpg"
-              alt="Description of image"
-              class="modal-image"
-            />
+            <a href="https://example.com/hooks" target="_blank">
+              <img
+                alt="Description of image"
+                class="modal-image"
+                src="https://angular.io/assets/images/logos/angular/angular.png"
+                width="400"
+                height="200"
+                priority
+              />
+            </a>
           </div>
           <div class="column">
             <h3>Angular</h3>
-            <p>
+            <code>
               Angular is a platform for building mobile and desktop web
               applications. It is a full-fledged framework with powerful tools.
-            </p>
+            </code>
           </div>
           <div class="column">
             <h3>React</h3>
-            <p>
+            <code>
               React is a JavaScript library for building user interfaces. It
               focuses on building UI components and is more flexible in its
               approach.
-            </p>
+            </code>
           </div>
         </div>
       </li>
     </ul>
   </div>
-
-  <!-- New row for differences -->
 </mat-dialog-content>
