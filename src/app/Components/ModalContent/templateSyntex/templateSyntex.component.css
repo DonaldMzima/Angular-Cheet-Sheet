@@ -42,3 +42,15 @@ span {
   max-width: 100%; /* Ensures the image is responsive */
   height: auto; /* Keeps the aspect ratio */
 }
+
+pre {
+  text-align: left;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+  color: #030303;
+}

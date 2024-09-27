@@ -1,31 +1,27 @@
 <div class="grid-row">
   <div class="column">
-    <a href="https://example.com/formview" target="_blank">
-      <!-- <img
-        src="/src/assets/Setting_Up.webp"
-        alt="Description of image"
-        class="modal-image"
-      /> -->
+    <a [routerLink]="['/my-project-setup-page']" (click)="closeDialog()">
+      <!-- Update the routerLink -->
       <img
         alt="Description of image"
         class="modal-image"
-        src="https://angular.io/assets/images/logos/angular/angular.png"
         width="400"
         height="200"
-        priority
+        [src]="url"
       />
     </a>
   </div>
   <div class="column">
     <h3>Angular</h3>
     <code>
-      npm install -g
-      <!-- @angular/cli  -->
-      ng new angular-app cd angular-app ng serve
+      npm install -g angular/cli<br />
+      ng new angular-app<br />
+      cd angular-app<br />
+      ng serve
     </code>
   </div>
   <div class="column">
     <h3>React</h3>
-    <code> You use create-react-app or Next.js </code>
+    <code> Use create-react-app or Next.js </code>
   </div>
 </div>
