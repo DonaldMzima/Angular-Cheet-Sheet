@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { TutorialViewComponent } from './tutorial-view/tutorial-view.component';
 import { ModalView, ModalViewDialog } from './modal/modal.component';
 import { FormExampleComponent } from './Components/form-example/form-example.component';
