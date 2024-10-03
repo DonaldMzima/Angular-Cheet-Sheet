@@ -67,15 +67,36 @@ export class TutorialViewComponent {
       title: 'Directives',
       rating: 5.0,
       color: 'purple',
-      codeExample: 'bear',
+      codeExample: 'Directives',
       link: '/projectSetUpPage',
     },
     {
       title: 'Custom Hooks',
       rating: 5.0,
       color: 'red',
-      codeExample: 'FormView',
+      codeExample: 'Hooks',
       link: '/projectSetUpPage',
+    },
+    {
+      title: 'Forms', // New card for Forms
+      rating: 5.0,
+      color: 'cyan',
+      codeExample: 'Forms',
+      link: '/formsPage',
+    },
+    {
+      title: 'Data Binding', // New card for Data Binding
+      rating: 5.0,
+      color: 'teal',
+      codeExample: 'Data_Binding',
+      link: '/dataBindingPage',
+    },
+    {
+      title: 'Props', // New card for Data Binding
+      rating: 5.0,
+      color: 'pink',
+      codeExample: 'Data_Binding',
+      link: '/dataBindingPage',
     },
   ];
 

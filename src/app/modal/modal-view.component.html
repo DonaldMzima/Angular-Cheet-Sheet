@@ -14,35 +14,7 @@
         <app-lifeCircleMethods></app-lifeCircleMethods>
       </li>
       <li *ngIf="data.codeExample === 'State_Management'">
-        <div class="grid-row">
-          <div class="column">
-            <a href="https://example.com/state-management" target="_blank">
-              <img
-                alt="Description of image"
-                class="modal-image"
-                src="https://angular.io/assets/images/logos/angular/angular.png"
-                width="400"
-                height="200"
-                priority
-              />
-            </a>
-          </div>
-          <div class="column">
-            <h3>Angular</h3>
-            <code>
-              Angular is a platform for building mobile and desktop web
-              applications. It is a full-fledged framework with powerful tools.
-            </code>
-          </div>
-          <div class="column">
-            <h3>React</h3>
-            <p>
-              React is a JavaScript library for building user interfaces. It
-              focuses on building UI components and is more flexible in its
-              approach.
-            </p>
-          </div>
-        </div>
+        <app-stateManagement></app-stateManagement>
       </li>
       <li *ngIf="data.codeExample === 'Routing'">
         <div class="grid-row">
@@ -107,66 +79,16 @@
         </div>
       </li>
       <li *ngIf="data.codeExample === 'bear'">
-        <div class="grid-row">
-          <div class="column">
-            <a href="https://example.com/bear" target="_blank">
-              <img
-                alt="Description of image"
-                class="modal-image"
-                src="https://angular.io/assets/images/logos/angular/angular.png"
-                width="400"
-                height="200"
-                priority
-              />
-            </a>
-          </div>
-          <div class="column">
-            <h3>Angular</h3>
-            <code>
-              Angular is a platform for building mobile and desktop web
-              applications. It is a full-fledged framework with powerful tools.
-            </code>
-          </div>
-          <div class="column">
-            <h3>React</h3>
-            <code>
-              React is a JavaScript library for building user interfaces. It
-              focuses on building UI components and is more flexible in its
-              approach.
-            </code>
-          </div>
-        </div>
+        <app-customHooks></app-customHooks>
       </li>
       <li *ngIf="data.codeExample === 'Hooks'">
-        <div class="grid-row">
-          <div class="column">
-            <a href="https://example.com/hooks" target="_blank">
-              <img
-                alt="Description of image"
-                class="modal-image"
-                src="https://angular.io/assets/images/logos/angular/angular.png"
-                width="400"
-                height="200"
-                priority
-              />
-            </a>
-          </div>
-          <div class="column">
-            <h3>Angular</h3>
-            <code>
-              Angular is a platform for building mobile and desktop web
-              applications. It is a full-fledged framework with powerful tools.
-            </code>
-          </div>
-          <div class="column">
-            <h3>React</h3>
-            <code>
-              React is a JavaScript library for building user interfaces. It
-              focuses on building UI components and is more flexible in its
-              approach.
-            </code>
-          </div>
-        </div>
+        <app-customHooks></app-customHooks>
+      </li>
+      <li *ngIf="data.codeExample === 'Forms'">
+        <app-customHooks></app-customHooks>
+      </li>
+      <li *ngIf="data.codeExample === 'Data_Binding'">
+        <app-customHooks></app-customHooks>
       </li>
     </ul>
   </div>

@@ -43,6 +43,15 @@ span {
   height: auto; /* Keeps the aspect ratio */
 }
 
+.code-snippet {
+  background-color: #f5f5f5; /* Light grey background */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Spacing inside the box */
+  overflow: auto; /* Add scroll if needed */
+  font-family: monospace; /* Monospace font for code */
+}
+
 pre {
   text-align: left;
   white-space: pre-wrap;
