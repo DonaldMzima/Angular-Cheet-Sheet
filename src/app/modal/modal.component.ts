@@ -14,6 +14,8 @@ import { ProjectSetUpComponent } from '../Components/ModalContent/projectSetUp/p
 import { ComponentsComponent } from '../Components/ModalContent/components/components.component';
 import { TemplateSyntexComponent } from '../Components/ModalContent/templateSyntex/templateSyntex.component';
 import { LifeCircleMethodsComponent } from '../Components/ModalContent/lifeCircleMethods/lifeCircleMethods.component';
+import { CustomHooksComponent } from '../Components/ModalContent/customHooks/customHooks.component';
+import { StateManagementComponent } from '../Components/ModalContent/stateManagement/stateManagement.component';
 
 export interface DialogData {
   codeExample:
@@ -25,7 +27,10 @@ export interface DialogData {
     | 'Routing'
     | 'Services'
     | 'bear'
-    | 'Hooks';
+    | 'Hooks'
+    | 'Forms'
+    | 'Props'
+    | 'Data_Binding';
 }
 
 @Component({
@@ -70,6 +75,8 @@ export class ModalView {
     ComponentsComponent,
     TemplateSyntexComponent,
     LifeCircleMethodsComponent,
+    CustomHooksComponent,
+    StateManagementComponent,
   ],
 })
 export class ModalViewDialog {
