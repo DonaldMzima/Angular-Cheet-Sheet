@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-customHooks',
+  imports: [RouterModule],
   standalone: true,
   templateUrl: './customHooks.component.html',
   styleUrls: ['./customHooks.component.css'],
@@ -66,7 +69,14 @@ function DemoComponent() {
 export default DemoComponent;
 `;
 
+  public dialog = inject(MatDialog);
+  projectSetUp: any;
   constructor() {}
 
   ngOnInit() {}
+  router = inject(Router);
+
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 }

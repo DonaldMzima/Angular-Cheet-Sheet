@@ -41,7 +41,6 @@ const routes: Routes = [
     path: 'component-template-syntex-page',
     component: TemplateSyntexPageComponent,
   },
-
   { path: '**', component: PageNotFoundComponent },
 ];
 export const appConfig: ApplicationConfig = {

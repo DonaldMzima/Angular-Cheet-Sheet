@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-service',
+  imports: [RouterModule],
   standalone: true,
   templateUrl: './service.component.html',
   styleUrls: ['./service.component.css'],
@@ -73,7 +76,14 @@ function ParentComponent() {
 }
   `;
 
+  public dialog = inject(MatDialog);
+  projectSetUp: any;
   constructor() {}
 
   ngOnInit() {}
+  router = inject(Router);
+
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 }
