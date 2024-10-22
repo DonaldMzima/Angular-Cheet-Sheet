@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-templateSyntex',
+  imports: [RouterModule],
   standalone: true,
   templateUrl: './templateSyntex.component.html',
   styleUrls: ['./templateSyntex.component.css'],
@@ -33,7 +36,14 @@ export class TemplateSyntexComponent implements OnInit {
   );
     `;
 
+  public dialog = inject(MatDialog);
+  projectSetUp: any;
   constructor() {}
 
   ngOnInit() {}
+  router = inject(Router);
+
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 }

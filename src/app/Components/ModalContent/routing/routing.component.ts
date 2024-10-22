@@ -1,8 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   standalone: true,
   selector: 'app-routing',
+  imports: [RouterModule],
   templateUrl: './routing.component.html',
   styleUrls: ['./routing.component.css'],
 })
@@ -69,7 +72,14 @@ function App() {
 export default App;
 `;
 
+  public dialog = inject(MatDialog);
+  projectSetUp: any;
   constructor() {}
 
   ngOnInit() {}
+  router = inject(Router);
+
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 }

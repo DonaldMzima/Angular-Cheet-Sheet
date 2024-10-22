@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-directives',
+  imports: [RouterModule],
   standalone: true,
   templateUrl: './directives.component.html',
   styleUrls: ['./directives.component.css'],
@@ -56,7 +59,14 @@ function ExampleComponent() {
 export default ExampleComponent;
   `;
 
+  public dialog = inject(MatDialog);
+  projectSetUp: any;
   constructor() {}
 
   ngOnInit() {}
+  router = inject(Router);
+
+  closeDialog() {
+    this.dialog.closeAll();
+  }
 }
