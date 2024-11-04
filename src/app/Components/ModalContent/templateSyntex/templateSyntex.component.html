@@ -1,6 +1,9 @@
 <div class="grid-row">
   <div class="column">
-    <a href="https://example.com/props" target="_blank">
+    <a
+      [routerLink]="['/component-template-syntex-page']"
+      (click)="closeDialog()"
+    >
       <img
         alt="Description of image"
         class="modal-image"
