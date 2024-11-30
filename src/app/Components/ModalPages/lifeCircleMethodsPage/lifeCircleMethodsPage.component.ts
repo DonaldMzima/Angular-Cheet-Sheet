@@ -7,72 +7,52 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lifeCircleMethodsPage.component.css'],
 })
 export class LifeCircleMethodsPageComponent implements OnInit {
-  // Angular lifecycle example code
-  public angularLifecycleCode: string = `
-export class ExampleComponent implements OnInit, OnDestroy {
-  constructor() {
-    console.log('Constructor: Component is created.');
-  }
+  angularLifecycleMethods = [
+    {
+      hook: 'ngOnInit',
+      description: 'Called once after the component is initialized.',
+    },
+    {
+      hook: 'ngOnChanges',
+      description: 'Called when an input property changes.',
+    },
+    { hook: 'ngDoCheck', description: 'Called during change detection.' },
+    {
+      hook: 'ngAfterViewInit',
+      description: 'Called after the component’s view is fully initialized.',
+    },
+    {
+      hook: 'ngOnDestroy',
+      description: 'Called just before the component is destroyed.',
+    },
+  ];
 
-  ngOnInit() {
-    console.log('ngOnInit: Component is initialized.');
-    // Usually used to fetch data or setup subscriptions
-  }
-
-  ngOnDestroy() {
-    console.log('ngOnDestroy: Component is destroyed.');
-    // Clean up subscriptions, etc.
-  }
-}
-  `;
-
-  // React lifecycle example code (class component)
-  public reactClassLifecycleCode: string = `
-class ExampleComponent extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log('Constructor: Component is created.');
-  }
-
-  componentDidMount() {
-    console.log('componentDidMount: Component is mounted.');
-    // Fetch data or set up subscriptions here
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    console.log('componentDidUpdate: Component updated.');
-    // Reacts to prop or state changes
-  }
-
-  componentWillUnmount() {
-    console.log('componentWillUnmount: Component is about to be destroyed.');
-    // Clean up subscriptions, etc.
-  }
-
-  render() {
-    return <div>React Class Component Lifecycle Example</div>;
-  }
-}
-  `;
-
-  // React lifecycle example (functional component with useEffect)
-  public reactFunctionalLifecycleCode: string = `
-import { useEffect } from 'react';
-
-function ExampleComponent() {
-  useEffect(() => {
-    console.log('useEffect: Component is mounted.');
-    // Fetch data or set up subscriptions here
-
-    return () => {
-      console.log('useEffect cleanup: Component is about to be destroyed.');
-      // Clean up subscriptions, etc.
-    };
-  }, []);
-
-  return <div>React Functional Component Lifecycle Example</div>;
-}
-  `;
+  reactLifecycleMethods = [
+    {
+      hook: 'constructor',
+      description: 'Called before the component is mounted.',
+    },
+    {
+      hook: 'componentDidMount',
+      description: 'Called after the component is mounted.',
+    },
+    {
+      hook: 'componentDidUpdate',
+      description: 'Called after the component updates.',
+    },
+    {
+      hook: 'componentWillUnmount',
+      description: 'Called just before the component is unmounted.',
+    },
+    {
+      hook: 'useEffect (Mounted)',
+      description: 'Mimics componentDidMount using [] as dependency.',
+    },
+    {
+      hook: 'useEffect (Updated)',
+      description: 'Mimics componentDidUpdate using [dependencies].',
+    },
+  ];
 
   constructor() {}
 
