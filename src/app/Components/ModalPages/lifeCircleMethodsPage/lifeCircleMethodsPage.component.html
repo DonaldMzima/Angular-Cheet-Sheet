@@ -1,21 +1,73 @@
-<div class="comparison-container">
-  <h1>How to Create a Hooks in Angular vs React</h1>
+<div class="lifecycle-container">
+  <h1 class="lifecycle-title">Lifecycle Methods Comparison</h1>
 
-  <div class="code-comparison">
-    <!-- Angular Section -->
-    <div class="code-section">
-      <h2>Angular</h2>
-      <pre>
-        <code>{{ reactClassLifecycleCode }}</code>
-      </pre>
-    </div>
+  <!-- Angular Lifecycle Methods Table -->
+  <h2 class="lifecycle-section-title">Angular Lifecycle Methods</h2>
+  <table class="lifecycle-table">
+    <thead>
+      <tr>
+        <th>Lifecycle Hook</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ngOnInit</td>
+        <td>Called once after the component is initialized.</td>
+      </tr>
+      <tr>
+        <td>ngOnChanges</td>
+        <td>Called when an input property changes.</td>
+      </tr>
+      <tr>
+        <td>ngDoCheck</td>
+        <td>Called during change detection.</td>
+      </tr>
+      <tr>
+        <td>ngAfterViewInit</td>
+        <td>Called after the component’s view is fully initialized.</td>
+      </tr>
+      <tr>
+        <td>ngOnDestroy</td>
+        <td>Called just before the component is destroyed.</td>
+      </tr>
+    </tbody>
+  </table>
 
-    <!-- React Section -->
-    <div class="code-section">
-      <h2>React</h2>
-      <pre>
-        <code>{{ reactFunctionalLifecycleCode }}</code>
-      </pre>
-    </div>
-  </div>
+  <!-- React Lifecycle Methods Table -->
+  <h2 class="lifecycle-section-title">React Lifecycle Methods</h2>
+  <table class="lifecycle-table">
+    <thead>
+      <tr>
+        <th>Lifecycle Hook</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>constructor</td>
+        <td>Called before the component is mounted.</td>
+      </tr>
+      <tr>
+        <td>componentDidMount</td>
+        <td>Called after the component is mounted.</td>
+      </tr>
+      <tr>
+        <td>componentDidUpdate</td>
+        <td>Called after the component updates.</td>
+      </tr>
+      <tr>
+        <td>componentWillUnmount</td>
+        <td>Called just before the component is unmounted.</td>
+      </tr>
+      <tr>
+        <td>useEffect (Mounted)</td>
+        <td>Mimics componentDidMount using [] as dependency.</td>
+      </tr>
+      <tr>
+        <td>useEffect (Updated)</td>
+        <td>Mimics componentDidUpdate using [dependencies].</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

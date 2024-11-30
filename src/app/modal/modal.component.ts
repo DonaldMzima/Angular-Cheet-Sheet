@@ -16,6 +16,7 @@ import { TemplateSyntexComponent } from '../Components/ModalContent/templateSynt
 import { LifeCircleMethodsComponent } from '../Components/ModalContent/lifeCircleMethods/lifeCircleMethods.component';
 import { CustomHooksComponent } from '../Components/ModalContent/customHooks/customHooks.component';
 import { StateManagementComponent } from '../Components/ModalContent/stateManagement/stateManagement.component';
+import { FormsComponent } from '../Components/ModalContent/forms/forms.component';
 
 export interface DialogData {
   codeExample:
@@ -77,6 +78,7 @@ export class ModalView {
     LifeCircleMethodsComponent,
     CustomHooksComponent,
     StateManagementComponent,
+    FormsComponent,
   ],
 })
 export class ModalViewDialog {

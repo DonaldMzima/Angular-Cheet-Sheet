@@ -1,93 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CommonModule } from '@angular/common'; // <-- Import this for pipes like `json`
 
 @Component({
   selector: 'app-forms-page',
-  standalone: true,
   templateUrl: './formsPage.component.html',
-  styleUrls: ['./formsPage.component.css'],
+  styleUrls: ['./formsPage.component.html'],
 })
 export class FormsPageComponent implements OnInit {
-  // Angular form example code
-  public angularFormCode: string = `
-<!-- Angular Reactive Form -->
-<form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <label for="name">Name:</label>
-  <input id="name" formControlName="name" type="text" />
+  myForm: FormGroup;
+  formData: any = null;
 
-  <label for="email">Email:</label>
-  <input id="email" formControlName="email" type="email" />
-
-  <button type="submit">Submit</button>
-</form>
-
-export class ExampleComponent implements OnInit {
-  form: FormGroup;
-
-  constructor(private fb: FormBuilder) {}
-
-  ngOnInit() {
-    this.form = this.fb.group({
-      name: ['', Validators.required],
+  constructor(private fb: FormBuilder) {
+    this.myForm = this.fb.group({
+      name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
     });
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
   onSubmit() {
-    if (this.form.valid) {
-      console.log(this.form.value);
+    if (this.myForm.valid) {
+      this.formData = this.myForm.value;
+      console.log('Form Submitted:', this.formData);
     }
   }
-}
-  `;
-
-  // React form example code
-  public reactFormCode: string = `
-import React, { useState } from 'react';
-
-function ExampleComponent() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="name">Name:</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        value={formData.name}
-        onChange={handleChange}
-      />
-
-      <label htmlFor="email">Email:</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        value={formData.email}
-        onChange={handleChange}
-      />
-
-      <button type="submit">Submit</button>
-    </form>
-  )`;
-
-  constructor() {}
-
-  ngOnInit() {}
 }
