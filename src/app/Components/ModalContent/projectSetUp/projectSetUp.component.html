@@ -1,27 +1,108 @@
-<div class="grid-row">
-  <div class="column">
-    <a [routerLink]="['/my-project-setup-page']" (click)="closeDialog()">
-      <!-- Update the routerLink -->
-      <img
-        alt="Description of image"
-        class="modal-image"
-        width="400"
-        height="200"
-        [src]="url"
-      />
-    </a>
+<div class="modal-content">
+  <div class="modal-header">
+    <h2>Project Setup Guide</h2>
+    <p class="subtitle">
+      Choose your framework and get started with your project
+    </p>
   </div>
-  <div class="column">
-    <h3>Angular</h3>
-    <code>
-      npm install -g angular/cli<br />
-      ng new angular-app<br />
-      cd angular-app<br />
-      ng serve
-    </code>
+
+  <div class="framework-grid">
+    <!-- Angular Section -->
+    <div class="framework-card">
+      <div class="framework-header">
+        <img
+          src="assets/angular-logo.png"
+          alt="Angular Logo"
+          class="framework-logo"
+        />
+        <h3>Angular</h3>
+      </div>
+
+      <div class="setup-steps">
+        <h4>Quick Start</h4>
+        <div class="code-block">
+          <pre><code># Install Angular CLI globally
+npm install -g &#64;angular/cli
+
+# Create a new project
+ng new my-angular-app
+
+# Navigate to project directory
+cd my-angular-app
+
+# Start development server
+ng serve</code></pre>
+        </div>
+
+        <div class="additional-info">
+          <h4>Key Features</h4>
+          <ul>
+            <li>TypeScript-based framework</li>
+            <li>Built-in dependency injection</li>
+            <li>Powerful CLI tools</li>
+            <li>Comprehensive documentation</li>
+          </ul>
+        </div>
+      </div>
+
+      <a
+        [routerLink]="['/my-project-setup-page']"
+        (click)="closeDialog()"
+        class="learn-more-btn"
+      >
+        Learn More About Angular
+      </a>
+    </div>
+
+    <!-- React Section -->
+    <div class="framework-card">
+      <div class="framework-header">
+        <img
+          src="assets/react-logo.png"
+          alt="React Logo"
+          class="framework-logo"
+        />
+        <h3>React</h3>
+      </div>
+
+      <div class="setup-steps">
+        <h4>Quick Start</h4>
+        <div class="code-block">
+          <pre><code># Using Create React App
+npx create-react-app my-react-app
+
+# Using Next.js
+npx create-next-app&#64;latest my-next-app
+
+# Navigate to project directory
+cd my-react-app  # or my-next-app
+
+# Start development server
+npm start  # or npm run dev for Next.js</code></pre>
+        </div>
+
+        <div class="additional-info">
+          <h4>Key Features</h4>
+          <ul>
+            <li>JavaScript/TypeScript support</li>
+            <li>Virtual DOM for performance</li>
+            <li>Rich ecosystem</li>
+            <li>Flexible architecture</li>
+          </ul>
+        </div>
+      </div>
+
+      <a
+        [routerLink]="['/react-setup']"
+        (click)="closeDialog()"
+        class="learn-more-btn"
+      >
+        Learn More About React
+      </a>
+    </div>
   </div>
-  <div class="column">
-    <h3>React</h3>
-    <code> Use create-react-app or Next.js </code>
+
+  <div class="modal-footer">
+    <button class="close-btn" (click)="closeDialog()">Close</button>
   </div>
 </div>
