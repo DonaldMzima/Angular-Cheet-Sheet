@@ -1,7 +1,104 @@
-<header>
-  <div class="logo">🐳 Angular Cheat Sheet</div>
-  <div class="nav-buttons">
-    <a href="#" class="btn btn-light">Log In</a>
-    <a href="#" class="btn btn-dark">Get Started</a>
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-left">
+      <a [routerLink]="['/']" class="logo">
+        <span class="logo-icon">🐳</span>
+        <span class="logo-text">Angular Cheat Sheet</span>
+      </a>
+    </div>
+
+    <div class="navbar-center">
+      <div class="search-container">
+        <input
+          type="text"
+          placeholder="Search topics..."
+          class="search-input"
+          [(ngModel)]="searchQuery"
+          (keyup.enter)="onSearch()"
+        />
+        <button class="search-btn" (click)="onSearch()">
+          <span class="search-icon">🔍</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="navbar-right">
+      <div class="nav-links">
+        <a [routerLink]="['/docs']" class="nav-link">Documentation</a>
+        <a [routerLink]="['/examples']" class="nav-link">Examples</a>
+        <a [routerLink]="['/resources']" class="nav-link">Resources</a>
+      </div>
+
+      <div class="nav-buttons">
+        <button
+          class="theme-toggle"
+          (click)="toggleTheme()"
+          [attr.aria-label]="
+            isDarkTheme ? 'Switch to light theme' : 'Switch to dark theme'
+          "
+        >
+          {{ isDarkTheme ? "☀️" : "🌙" }}
+        </button>
+        <a [routerLink]="['/login']" class="btn btn-light">Log In</a>
+        <a [routerLink]="['/signup']" class="btn btn-dark">Get Started</a>
+      </div>
+
+      <button
+        class="mobile-menu-btn"
+        (click)="toggleMobileMenu()"
+        [attr.aria-label]="isMobileMenuOpen ? 'Close menu' : 'Open menu'"
+      >
+        <span class="menu-icon" [class.open]="isMobileMenuOpen">☰</span>
+      </button>
+    </div>
   </div>
-</header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="isMobileMenuOpen">
+    <div class="mobile-search">
+      <input
+        type="text"
+        placeholder="Search topics..."
+        class="search-input"
+        [(ngModel)]="searchQuery"
+        (keyup.enter)="onSearch()"
+      />
+      <button class="search-btn" (click)="onSearch()">
+        <span class="search-icon">🔍</span>
+      </button>
+    </div>
+
+    <div class="mobile-nav-links">
+      <a
+        [routerLink]="['/docs']"
+        class="mobile-nav-link"
+        (click)="closeMobileMenu()"
+        >Documentation</a
+      >
+      <a
+        [routerLink]="['/examples']"
+        class="mobile-nav-link"
+        (click)="closeMobileMenu()"
+        >Examples</a
+      >
+      <a
+        [routerLink]="['/resources']"
+        class="mobile-nav-link"
+        (click)="closeMobileMenu()"
+        >Resources</a
+      >
+      <a
+        [routerLink]="['/login']"
+        class="mobile-nav-link"
+        (click)="closeMobileMenu()"
+        >Log In</a
+      >
+      <a
+        [routerLink]="['/signup']"
+        class="mobile-nav-link btn-dark"
+        (click)="closeMobileMenu()"
+        >Get Started</a
+      >
+    </div>
+  </div>
+</nav>

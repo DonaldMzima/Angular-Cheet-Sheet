@@ -1,0 +1,95 @@
+<div class="comparison-container">
+  <div class="comparison-header">
+    <h1>Angular vs React Components</h1>
+    <p class="subtitle">
+      A comprehensive comparison of component patterns between Angular and React
+    </p>
+  </div>
+
+  <div class="examples-grid">
+    <div class="example-card" *ngFor="let example of componentExamples">
+      <div class="example-header">
+        <h2>{{ example.title }}</h2>
+        <p class="description">{{ example.description }}</p>
+      </div>
+
+      <div class="code-comparison">
+        <div class="code-section">
+          <div class="code-header">
+            <span class="framework-icon">🅰️</span>
+            <h3>Angular</h3>
+          </div>
+          <div class="code-block">
+            <button
+              class="copy-button"
+              (click)="copyCode(example.angularCode)"
+              title="Copy Angular code"
+            >
+              Copy
+            </button>
+            <pre><code [innerHTML]="highlightCode(example.angularCode, 'angular')"></code></pre>
+          </div>
+        </div>
+
+        <div class="code-section">
+          <div class="code-header">
+            <span class="framework-icon">⚛️</span>
+            <h3>React</h3>
+          </div>
+          <div class="code-block">
+            <button
+              class="copy-button"
+              (click)="copyCode(example.reactCode)"
+              title="Copy React code"
+            >
+              Copy
+            </button>
+            <pre><code [innerHTML]="highlightCode(example.reactCode, 'react')"></code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="key-differences">
+    <h2>Key Differences</h2>
+    <div class="differences-grid">
+      <div class="difference-card">
+        <h3>Component Definition</h3>
+        <ul>
+          <li>
+            <strong>Angular:</strong> Uses TypeScript classes with decorators
+          </li>
+          <li><strong>React:</strong> Uses JavaScript/TypeScript functions</li>
+        </ul>
+      </div>
+
+      <div class="difference-card">
+        <h3>Template Syntax</h3>
+        <ul>
+          <li>
+            <strong>Angular:</strong> Uses HTML templates with Angular-specific
+            syntax
+          </li>
+          <li><strong>React:</strong> Uses JSX (JavaScript XML)</li>
+        </ul>
+      </div>
+
+      <div class="difference-card">
+        <h3>State Management</h3>
+        <ul>
+          <li><strong>Angular:</strong> Uses class properties and RxJS</li>
+          <li><strong>React:</strong> Uses hooks (useState, useEffect)</li>
+        </ul>
+      </div>
+
+      <div class="difference-card">
+        <h3>Data Binding</h3>
+        <ul>
+          <li><strong>Angular:</strong> Two-way binding with [(ngModel)]</li>
+          <li><strong>React:</strong> One-way data flow with props</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
